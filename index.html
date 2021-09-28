@@ -1,8 +1,8 @@
 <!doctype html>
-<!-- File Name: -->
-<!-- Author:  -->
-<!-- Date Created/Updated:  -->
-<!-- This is a page that . -->
+<!-- File Name: index.html -->
+<!-- Author: Madhuri Jadhav and Claire Pini-->
+<!-- Date Created/Updated: 09/28/2021 -->
+<!-- This is the main page/homepage for Dr.Jadhav's Lab Drug Discovery. -->
 <!-- =================================================== -->
 
 <html>
@@ -10,11 +10,49 @@
 <head>
    <meta character set = "UTF-8">
     <title> Title </title>
+    <link href="style.css" type="text/css" rel="stylesheet">
     </head>
     
 <body>
-    Body
+<!-- =================================================== -->
+   <!-- Come up with a consistent way to use headers amongst all pages. -->
+   <div>
+       <h1>Dr.Jadhav's Lab Drug Discovery</h1>
+    
+<!-- =================================================== -->
+   <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->
+    <ul  id="navBar">
+       <li>
+           <a href="index.html" class="active">Homepage</a>
+       </li>
+        <li>
+            <a href="profile.html">About Dr.Jadhav</a>
+        </li>
+        <li>
+            <a href="lab page.html">Chemical Lab</a>
+        </li>
+        <li>
+            <a href="download.html">Software</a>
+        </li>
+    </ul>
+   </div>
+    
+<!-- =================================================== -->
+   <!-- Login Setion -->
+    <br><br>
+       <div id="loginBox">
+        Welcome, Claire.<br>
+        You are logged in.
+    </div>
+<!-- =================================================== -->
+    <!-- Scrolling Photogallery -->
+    <table style="width: 200px;" id="indexTable">
+        <tr><td><img id="indexPic" src="https://pixelsoftek.in/wp-content/uploads/2018/09/demo-image.jpg" alt="This will be where a scrolling photogallery will be placed."></td></tr>
+    </table>
+    <p style= "text-align: center;">(This will be where a scrolling photogallery will be placed.)</p>
+    
     </body>
+    
 
 
 </html>
