@@ -9,12 +9,18 @@
 
 
 body{
+    background-color: powderblue;
     margin: 0px;
     padding: 0px;
 }
 h1{
     text-align: center;
+    color: blue;
 }
+p1{
+    font-weight: bold;
+}
+
 #navBar{
     width: 100%;
     padding:0px;
@@ -68,3 +74,22 @@ h1{
     margin-right: auto;
     text-align: center;
 }
+
+<h1 style="color:blue;">A Blue Heading</h1>
+
+p {
+  color: #222;
+  font-family: Arial;
+    ;
+ 
+}
+
+table{
+    border: 1px solid black;
+    width: 100%;
+    border: 1px solid black;
+    background-color: beige
+}
+
+ th, td, tr{
+    border: 1px solid black;
