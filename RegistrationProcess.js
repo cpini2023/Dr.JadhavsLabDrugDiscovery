@@ -9,8 +9,6 @@ function getFormInfo(){
 	let email = document.getElementById("email").value;
 	let tel = document.getElementById("tel").value;
 	let url = document.getElementById("url").value;
-	
-    //let RegistrationTime = document.getElementById("orderTime").value;,
     
     //get the local time and stor it in the array
 	var currentTime = new Date();
