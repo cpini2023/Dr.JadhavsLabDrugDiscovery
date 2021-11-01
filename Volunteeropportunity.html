@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<!-- Volunteer Opportunity -->
+<!-- By: Madhuri J. Clair P-->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Volunteer Opportunity</title>
+
+      <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
+       
+      <link href="style.css" rel="stylesheet" type="text/CSS">
+      <link rel="stylesheet" href="style.css">
+      <script src= "RegistrationProcess.js"></script>
+
+   </head>
+
+   	<body>
+        <header>
+            <h1>Registration for volunteers</h1>
+            <p>Welcome to the  Jadhav's Lab. Lab is where the real work gets done. If at first you don’t succeed, run another trial.</p>
+            </header>
+
+
+      	<p><img id ="pharmalab" src = "pharm-skills-lab-group.jpg" class = "pharm-skills-lab-group" alt = "First positioned "/></p>  
+
+      	<form method = "post" action = "#" autocomplete="on">
+         	<p>
+            	<label>Full Name:
+               		<input type = "text" id="fullname" autofocus placeholder="Madhuri Jadhav" required  /> 
+                  Please enter your first name and last name.
+            	</label>
+            </p>
+			<p>
+				<label for = "txtList">Qualification:
+            		<input type = "text" id = "txtList" placeholder = "Select from the menu" list = "qualification" />
+            			<datalist id = "qualification">
+               				<option value = "phD (Pharmacy)">
+               				<option value = "phD(Microbiology)">
+               				<option value = "phD(chemistry)"> 
+                            <option value = "MS(Pharmacy)">
+               				<option value = "MS(Microbiology)">
+                            <option value = "MS(chemistry)"> 
+                            <option value = "BS(Pharmacy)">
+               				<option value = "BS(Microbiology)">
+               				<option value = "BS(chemistry)"> 
+            			</datalist>
+        		</label>
+        	</p>
+            <p>
+                <label for="myfile"> Select Files: </label>
+                <input type="file" id="myfile" name="myfile" > <br>
+                
+            </p>
+         	<p>
+            	<label>Enter the number of days per week you would like to volunteer in a week:
+               		<input id ="numofDays" type = "number" 
+                  			min = "1"
+                  			max = "7"
+                  			step = "1"
+                  			value = "1" />
+            	</label> (Enter a number between 1 and 7)
+         	</p>
+         
+         	<p>
+            	<label>Email:
+               		<input id="email" type = "email" placeholder = "email@domain.com" 
+                  required multiple/> Please enter your email address.
+            	</label>
+         	</p>
+         
+         	<p>
+            	<label>Telephone:
+               		<input id="tel" type = "tel" placeholder = "(###) ###-####" 
+                  pattern = "\(\d{3}\) +\d{3}-\d{4}" required /> 
+                  Please enter your phone number!
+            	</label>
+         	</p>
+         	
+         	<p>
+            	<label>Please tell us which website you used to hear about us:
+               		<input id="url" type = "url" placeholder = "http://www.domainname.com" /> 
+                  the correct website should have the following format http://www.domainname.com
+            	</label>
+         	</p>
+         
+         	<p> Please enter your address:
+            	<label> Street Name: <input type="text" id="streetName" /> </label>
+               <label> Apartment Number: <input type = "text" id="apartmentNumber" /> </label>
+               <label> City: <input type="text" id="city" /> </label>
+               <label> State: <input type="text" id="state" /> </label>
+               <label> Zip Code: <input type="text" id="zip" /> </label>
+         	</p>
+
+         	<p>
+            	<input type = "submit" value = "Submit" onclick="getFormInfo()" />
+            	<input type = "reset" value = "Clear" />
+         	</p>  
+
+      	</form>
+   	
+   		<footer>
+   			<p>If you have a question about Jadhav's Lab, please call us on 1(402) 280-1821. </p>
+
+            <p>We are located on <span id="special">2500 California, Omaha, NE 68178</span> </p>
+   		</footer>       
+   	</body>
+</html>
+  
