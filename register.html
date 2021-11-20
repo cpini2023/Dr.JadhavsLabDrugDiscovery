@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- File Name: login.html-->
 <!-- Author: Madhuri Jadhav and Claire Pini -->
-<!-- Date Created/Updated: 11/01/2021-->
+<!-- Date Created/Updated: 11/20/2021-->
 <!-- This is the registration page for Dr. Jadhav's Lab Drug Discovery. -->
 <!-- =================================================== -->
 
@@ -16,17 +16,17 @@
 <body style= 'text-align:center;'>
     <h1>Welcome to Dr.Jadhav's Lab Website!</h1>
     <p>Please enter the necessary information for you to be registered to this website:</p>
+<form method="post" action="register.php" autocomplete="on">
     <table style="margin-left: auto; margin-right: auto;">
-        <tr><td>First Name: </td><td><input type="text" id="Fname" value="John" required></td></tr>
-        <tr><td>Last Name: </td><td><input type="text" id="Lname" value="Doe" required></td></tr>
-        <tr><td>netID: </td><td><input type="text" id="nID" value="jed12345" required></td></tr>
-        <tr><td>Email: </td><td><input type="email" id="email" value="xxxx@hotmail.com" required></td></tr>
-        <tr><td>Password: </td><td><input type="text" id="password" value="password" required></td></tr>
-       
+        <tr><td>First Name: </td><td><input type="text" id="Fname" name="Fname" value="John" required></td></tr>
+        <tr><td>Last Name: </td><td><input type="text" id="Lname" name="Lname" value="Doe" required></td></tr>
+        <tr><td>netID: </td><td><input type="text" id="nID" name="nID" value="jed12345" required></td></tr>
+        <tr><td>Email: </td><td><input type="email" id="email" name="email" value="xxxx@hotmail.com" required></td></tr>
+        <tr><td>Password: </td><td><input type="text" id="password" name="password" value="password" required></td></tr>
     </table>
     <br>
-    <button type="submit" onclick="getRegistrationInfo();">Click to Register</button>
-    
+    <button type="submit" value="Submit">Click to Register</button>
+ </form> 
     
     
 </body>
