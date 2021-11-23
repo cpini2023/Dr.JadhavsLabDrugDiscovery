@@ -13,7 +13,6 @@ include("connectToDB.inc");
 
         <p>
         Name: <?php print($_POST['Fname']); ?> <?php print($_POST['Lname']); ?> <br>
-        netID: <?php print($_POST['nID']); ?> <br>
         Email: <?php print($_POST['email']); ?> <br>
         Password: Hidden for your safety.
         </p>
@@ -29,17 +28,16 @@ include("connectToDB.inc");
 
             $dataBase = connectDB();
 
-            $inputINSERT = "INSERT INTO Login(Fname,Lname,netID,email,password)";
+            $inputINSERT = "INSERT INTO Login(Fname,Lname,email,password)";
             $inputSTART = "VALUES('";
             $inputFNAME = mysqli_real_escape_string($dataBase, $_POST['Fname'])."','";
             $inputLNAME = mysqli_real_escape_string($dataBase, $_POST['Lname'])."','";
-            $inputNID = mysqli_real_escape_string($dataBase, $_POST['nID'])."','";
             $inputEMAIL = mysqli_real_escape_string($dataBase, $_POST['email'])."','";
-            $inputPASSWORD = mysqli_real_escape_string($dataBase, $_POST['password'])."','";
+            $inputPASSWORD = mysqli_real_escape_string($dataBase, $_POST['password']);
             $inputEND = "');";
 
 
-            $query1 = $inputINSERT.$inputSTART.$inputFNAME.$inputLNAME.$inputNID.$inputEMAIL.$inputPASSWORD.$inputEND;
+            $query1 = $inputINSERT.$inputSTART.$inputFNAME.$inputLNAME.$inputEMAIL.$inputPASSWORD.$inputEND;
 
             $result1 = mysqli_query($dataBase, $query1) or die('Query failed: ' . mysqli_error($dataBase));
 
