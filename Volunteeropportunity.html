@@ -6,38 +6,65 @@
    <head>
       <meta charset="utf-8">
       <title>Volunteer Opportunity</title>
-      <link href="style.css" type="text/css" rel="stylesheet">
+      <link href="mystyle.css" type="text/css" rel="stylesheet">
       <script src= "RegistrationProcess.js"></script>
 
    </head>
 
    	<body>
-        <header>
-            <h1>Registration for volunteers</h1>
-    <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->
-        <ul  id="navBar">
-           <li>
-               <a href="index.html" class="active">Homepage</a>
-           </li>
-            <li>
-                <a href="profile.html">About Dr.Jadhav</a>
-            </li>
-            <li>
-                <a href="lab page.html">Chemical Lab</a>
-            </li>
-           <li>
-                <a href="Volunteeropportunity.html">Become a volunteer</a>
-           </li>
-            <li>
-                <a href="download.html">Software</a>
-            </li>
+
+        <!-- =================================================== -->
+   <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->   
+     <div>
+     <table id="navBar">
+      <ul>
+      <tr>
+            <td>
+               <li>
+                   <h2>Dr.Jadhav's Lab Drug Discovery</h2>
+               </li>
+            </td>
+            <td>
+                <li>
+                   <a href="index.html">Homepage</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="profile.html">About Dr.Jadhav</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="lab page.php">Chemical Lab</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="Volunteeropportunity.html" class="ACTIVE">Become a volunteer</a>
+                </li>
+            </td>
+           <td>
+               <li>
+                    <a href="download.html">Software</a>
+               </li>
+           </td>
+           <td>
+               <li>
+                    <a href="admin.php">Admin</a>
+               </li>
+           </td>
+        </tr>
         </ul>
-        <br>
-            <p>Welcome to the  Jadhav's Lab. Lab is where the real work gets done. If at first you don’t succeed, run another trial.</p>
-            </header>
+    </table>
+    </div>
+   <div id="underNav">
+        <h1 style="text-align: center;">Registration for volunteers</h1>
+            <p style="text-align: center;">Welcome to the  Jadhav's Lab. Lab is where the real work gets done. If at first you don’t succeed, run another trial.</p>
 
+    </div>
 
-      	<p><img id ="pharmalab" src = "pharm-skills-lab-group.jpg" class = "pharm-skills-lab-group" alt = "First positioned "/></p>  
+      	<p><img id ="pharmalab" src = "pharm-skills-lab-group.jpg" class = "pharm-skills-lab-group" alt = "First positioned " width="100%"/></p>  
 
       	<form method = "post" action = "#" autocomplete="on">
          	<p>
@@ -118,6 +145,7 @@
    			<p>If you have a question about Jadhav's Lab, please call us on 1(402) 280-1821. </p>
 
             <p>We are located on <span id="special">2500 California, Omaha, NE 68178</span> </p>
-   		</footer>       
+   		</footer>   
+      
    	</body>
 </html>
