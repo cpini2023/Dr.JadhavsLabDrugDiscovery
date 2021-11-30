@@ -9,55 +9,103 @@
 
 <head>
    <meta character set = "UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Title </title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="mystyle.css" type="text/css" rel="stylesheet">
+    <script>
+        var pictureNum = 1;
+        showPic(pictureNum);
+
+        function plusDivs(num) {
+          showPic(pictureNum += num);
+        }
+
+        function showPic(index) {
+          var getPic = document.getElementsByClassName("PICTURESLIDES");
+          if (index > getPic.length) {
+              pictureNum = 1;
+          };
+          if (index < 1) {
+              pictureNum = getPic.length;
+          };
+          for (var i = 0; i < getPic.length; i++) {
+            getPic[i].style.display = "none";
+          };
+          getPic[pictureNum-1].style.display = "block";
+        }
+    </script>
     </head>
     
+    
 <body>
-<!-- =================================================== -->
-   <!-- Come up with a consistent way to use headers amongst all pages. -->
-   <div>
-       <h1>Dr.Jadhav's Lab Drug Discovery</h1>
     
 <!-- =================================================== -->
-   <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->
-    <ul  id="navBar">
-       <li>
-           <a href="index.html" class="active">Homepage</a>
-       </li>
-        <li>
-            <a href="profile.html">About Dr.Jadhav</a>
-        </li>
-        <li>
-            <a href="lab page.html">Chemical Lab</a>
-        </li>
-       <li>
-            <a href="Volunteeropportunity.html">Become a volunteer</a>
-       </li>
-        <li>
-            <a href="download.html">Software</a>
-        </li>
-    </ul>
-   </div>
+   <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->   
+     <table id="navBar">
+      <ul>
+      <tr>
+            <td>
+               <li>
+                   <h2>Dr.Jadhav's Lab Drug Discovery</h2>
+               </li>
+            </td>
+            <td>
+                <li>
+                   <a href="index.html" class="ACTIVE">Homepage</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="profile.html">About Dr.Jadhav</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="lab page.php">Chemical Lab</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="Volunteeropportunity.html">Become a volunteer</a>
+                </li>
+            </td>
+           <td>
+               <li>
+                    <a href="download.html">Software</a>
+               </li>
+           </td>
+           <td>
+               <li>
+                    <a href="admin.php">Admin</a>
+               </li>
+           </td>
+        </tr>
+        </ul>
+    </table>
+   
     
 <!-- =================================================== -->
-   <!-- Login Setion -->
-    <br><br>
+   <div id="underNav">
+    <!-- Login Setion -->
        <div id="loginBox">
         <table>
             <tr><td>Email:</td><td><input type="text"></td></tr>
             <tr><td>Password:</td><td><input type="text"></td></tr>
         </table>
         <br>
-        <button type="submit">Login</button> <a href="register.html" style="text-align: right; font:0.75rem">Click Here to Register</a>
+        <button type="submit">Login</button> <a href="register.html" style="text-align: right;">Click Here to Register</a>
     </div>
 <!-- =================================================== -->
+ 
     <!-- Scrolling Photogallery -->
-    <table style="width: 200px;" id="indexTable">
-        <tr><td><img id="indexPic" src="https://pixelsoftek.in/wp-content/uploads/2018/09/demo-image.jpg" alt="This will be where a scrolling photogallery will be placed."></td></tr>
-    </table>
-    <p style= "text-align: center;">(This will be where a scrolling photogallery will be placed.)</p>
-    
+    <div id="loginSlideShow" >
+        <img src="labstation.jpg" class="PICTURESLIDES">
+        <img src="lab.jpg" class="PICTURESLIDES" hidden>
+        <img src="computer.jpg" class="PICTURESLIDES" hidden>
+        <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+        <a class="next" onclick="plusDivs(+1)">&#10095;</a>
+    </div>
+    </div>
     </body>
     
 
