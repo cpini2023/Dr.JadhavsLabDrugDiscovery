@@ -1,0 +1,135 @@
+body, html {
+    font-family: 'Raleway', sans-serif;
+    background-color: lightgrey;
+    margin: 0;
+    padding-top: 0;
+}
+
+#navBar{
+   
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 1%;
+    padding-right;1%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: gray;
+    
+}
+
+#navBar li h2{
+    float: left; 
+    display:inline-block;
+    color: white;
+    text-align:center;
+    text-decoration: none;
+}
+
+#navBar li a {
+    float: right;
+    padding: 1%;
+    display:inline-block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+#navBar li a:hover {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ACTIVE {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#loginBox{
+    margin-right: 1%;
+    padding: 1% 0.5%;
+    overflow: auto;
+    float: right;
+    width: 15%;
+    text-align: center;
+    background-color: gainsboro;
+    border: solid;
+    border-color: gray;
+    border-width: thin;
+}
+
+#loginSlideShow {
+    width: 15%;
+    margin-right: 50%;
+    margin-left: auto;
+}
+
+.PICTURESLIDES{
+    width: 200%;
+    max-width:200%;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    font-size: 300%;
+    user-select: none;
+}
+
+.prev {
+    left: 30%;
+    margin-left: 1%;
+}
+
+.next {
+    right: 30%;
+    margin-right: 1%;
+}
+
+.prev:hover, .next:hover {
+  background-color: grey;
+}
+
+#profileStats{
+    margin-left: 2%;
+    float: left;
+    width: 30%;
+}
+
+#profileInfo{
+    margin-right: 2%;
+    float: right;
+    width: 65%;
+}
+
+#download1{
+    text-align: center;
+    width: 30%;
+    border: solid 3px; 
+    padding: 1%; 
+}
+
+#download2{
+    float: right;
+    text-align: center;
+    width: 30%;
+    border: solid 3px; 
+    padding: 1%; 
+    margin-left: 1%;
+}
+
+#incaseDownload{
+    justify-content: center;
+    display: flex;
+}
+
+#underNav{
+    margin-top: 5%;
+}
