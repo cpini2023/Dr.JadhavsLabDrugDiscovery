@@ -10,7 +10,7 @@
 <head>
    <meta character set = "UTF-8">
     <title> Profile </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
       <script type = "text/javascript">
       
       </script>
@@ -20,33 +20,50 @@
        
         <h1 style="text-align: center"> Dr. Gopal P. Jadhav </h1>
         
-        <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->
-        <ul  id="navBar">
-           <li>
-               <a href="index.html" class="active">Homepage</a>
-           </li>
-            <li>
-                <a href="profile.html">About Dr.Jadhav</a>
-            </li>
-            <li>
-                <a href="lab page.html">Chemical Lab</a>
-            </li>
-           <li>
-                <a href="Volunteeropportunity.html">Become a volunteer</a>
-           </li>
-            <li>
-                <a href="download.html">Software</a>
-            </li>
+        <!-- =================================================== -->
+   <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->   
+     <table id="navBar">
+      <ul>
+      <tr>
+            <td>
+               <li>
+                   <h2>Dr.Jadhav's Lab Drug Discovery</h2>
+               </li>
+            </td>
+            <td>
+                <li>
+                   <a href="index.html">Homepage</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="profile.html" class="ACTIVE">About Dr.Jadhav</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="lab page.php">Chemical Lab</a>
+                </li>
+            </td>
+            <td>
+                <li>
+                    <a href="Volunteeropportunity.html">Become a volunteer</a>
+                </li>
+            </td>
+           <td>
+               <li>
+                    <a href="download.html">Software</a>
+               </li>
+           </td>
+           <td>
+               <li>
+                    <a href="admin.php">Admin</a>
+               </li>
+           </td>
+        </tr>
         </ul>
-
-        <!-- Created Three tab buttons for accessing research Projects, Articles- publications and grants -->
-       <br>
-        <button onclick="document.location = ' '">Research Projects</button>
-        
-        <button onclick="document.location = 'Articlespublications.html'">Articles/Publications</button>
-        
-        <button onclick="document.location = ' '">Grants</button>
-       
+    </table>
+       <div id="profileStats">
        <!--Added profile pic (Temporary pic) in header 2-->
         
         <h2 style="image-orientation:justify"><img src="GopalProfile.jpeg" alt="Trulli" width="100" height="100"></h2>
@@ -60,10 +77,20 @@
                 School of Medicine,Omaha Campus   
         </p1>
         
+        <!-- Created Three tab buttons for accessing research Projects, Articles- publications and grants -->
+       <br>
+        <button onclick="document.location = ' '">Research Projects</button>
         
-        <!-- This p is a paragraph that specifies Dr. Jadhav's concise biography -->
-       
+        <button onclick="document.location = 'Articlespublications.html'">Articles/Publications</button>
+        
+        <button onclick="document.location = ' '">Grants</button>
+        
+        
+        </div>        
+      <!-- This p is a paragraph that specifies Dr. Jadhav's concise biography -->
+       <div id="profileInfo">
         <p>
+        <h3 style="text-align: center;">About Dr. Jadhav</h3>
         After obtaining a Bachelor and Masters degrees in pharmacy from the Pune University (India) in 1998, Dr Gopal spent a year working as a synthetic chemist and three years working as Lecturer of Medicinal chemistry in India, before undertaking a PhD at the University of Nottingham, UK. He completed Ph D under the supervision of Dr S R Chhabra, Prof. Peter Fischer, Prof. David Pritchard and Prof. Barrie Kellam and  continued to work for five years as post-doctoral research fellow on following projects.<br>
         
         1) Cancer Research project funded by BBSRC, UK, focusing on the work involving Computer aided designing and synthesis of small chemical molecules as inhibitors of pRb-E7 interactions. <br>
@@ -88,6 +115,6 @@
         
             <p>
             Bioassay techniques: Advanced skills in Splenocyte proliferation assays in murine leukocytes and human blood monocytes (immune assay) and Bioluminescence induction assay using luminometer (microbiological assay.)</p>
-        
+        </div>
     </body>
 </html>
