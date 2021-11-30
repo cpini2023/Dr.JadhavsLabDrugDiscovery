@@ -4,7 +4,7 @@ include("connectToDB.inc");
 ?>
 <html>
     <head>
-        <link href="style.css" rel="stylesheet" type="text/CSS">
+        <link href="mystyle.css" rel="stylesheet" type="text/CSS">
         <script src="webRegistration.js"></script>
 
     </head>
