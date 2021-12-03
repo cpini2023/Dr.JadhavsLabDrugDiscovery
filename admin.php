@@ -54,7 +54,7 @@
         </tr>
         </ul>
     </table>
-    <br><br><br><br><br><br>
+    <br>
 <div id="underNav">
 <?php
 
@@ -76,7 +76,7 @@ else{
 	}
 
 
-/////////////Creating Two Tables that show all the database data/////////////
+
 function showAllData()
 {
 	$dataBase = connectDB();
@@ -84,13 +84,28 @@ function showAllData()
 	$query1 = 'SELECT * FROM Login ORDER BY login_id';
 	$result1 = mysqli_query($dataBase, $query1) or die('Query failed: ' . mysqli_error($dataBase));
 	
-	echo "<br>All <i>Student</i> Records:<br>";
+	echo "<br>Student Data:<br>(Login)<br>";
 	
 	echo "<table border='1'>";
-	echo "<tr> <td>login_id</td> <td>First Name</td> <td>Last Name</td><td>email</td> <td>Password</td></tr>";
+	echo "<tr> <td>Login ID<br>(login_id)</td> <td>First Name<br>(Fname)</td> <td>Last Name<br>(Lname)</td><td>Email<br>(email)</td> <td>Password<br>(password)</td></tr>";
 	while ($line1 = mysqli_fetch_array($result1, MYSQL_ASSOC))
 		{extract($line1);
 			echo "<tr> <td>$login_id</td> <td>$Fname</td> <td>$Lname</td> <td>$email</td> <td>$password</td></tr>";
+		}
+    echo "</table>";
+    
+    
+    
+    $query2 = 'SELECT * FROM EmptyChemicals ORDER BY numSubmission';
+	$result2 = mysqli_query($dataBase, $query2) or die('Query failed: ' . mysqli_error($dataBase));
+	
+	echo "<br>Clemicals that are running low:<br>(EmptyChemicals)<br>";
+	
+	echo "<table border='1'>";
+	echo "<tr> <td>Submisison Order<br>(numSubmission)</td> <td>Name of Student Submitting<br>(Name)</td> <td>netID of Student<br>(netID)</td><td>Chemical<br>(Chemical)</td> <td>Day and Time of Submission<br>(DaySubmission)</td></tr>";
+	while ($line2 = mysqli_fetch_array($result2, MYSQL_ASSOC))
+		{extract($line2);
+			echo "<tr> <td>$numSubmission</td> <td>$Name</td> <td>$netID</td> <td>$Chemical</td> <td>$DaySubmission</td></tr>";
 		}
     echo "</table>";
     
@@ -99,7 +114,9 @@ function showAllData()
 }
 
 
-///////////Enabling the Admin to DELETE records///////////
+
+
+
 function deleteRecords(){
 	$dataBase = connectDB();
 	
@@ -120,7 +137,7 @@ function deleteRecords(){
 }
 
 
-///////////Enabling the Admin to UPDATE records///////////
+
 function updateRecords(){
 	$dataBase = connectDB();
 	
@@ -146,7 +163,7 @@ function updateRecords(){
 
 
 
-/////Print the Two forms////////
+
 echo <<<END
 	<h2>Below you can DELETE records from the tables above</h2>
 	<form action="$_SERVER[PHP_SELF]" method="post">
