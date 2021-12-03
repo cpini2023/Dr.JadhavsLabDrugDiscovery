@@ -1,3 +1,8 @@
+<!-- File Name: register.php -->
+<!-- Author: Madhuri Jadhav and Claire Pini-->
+<!-- Date Created/Updated: 12/03/2021 -->
+<!-- This is the .php page that will allow students to register for this website. -->
+<!-- --------------------------------------------------- -->
 <!DOCTYPE html>
 <?php
 include("connectToDB.inc");
