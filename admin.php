@@ -6,13 +6,12 @@
 <html>
 	<head>
 		<title>Admin Page</title>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<link href="mystyle.css" type="text/css" rel="stylesheet">
  
 	</head>
 
 <body>
-<!-- =================================================== -->
+<!-- --------------------------------------------------- -->
    <!-- Navigation Bar. Use this in all pages and make sure correct page is .active -->   
      <table id="navBar">
       <ul>
@@ -58,7 +57,8 @@
 <div id="underNav">
 <?php
 
-
+// --------------------------------------------------- //
+// Enables the page to show tables off of database //
 if(isset($_POST['tableName1']) &&  isset($_POST['attributeName1']) && isset($_POST['attributeValue1']))
 	{
 		deleteRecords();
@@ -75,8 +75,10 @@ else{
 	showAllData();
 	}
 
-
-
+// --------------------------------------------------- //
+// Shows Login Table and EmptyChemicals Table //
+// Login Table shows data filled out by students when they registered. //
+// EmptyChemicals Table shows information on chemical refill requests and who filled oit those orders. //
 function showAllData()
 {
 	$dataBase = connectDB();
@@ -115,8 +117,8 @@ function showAllData()
 
 
 
-
-
+// --------------------------------------------------- //
+// Allows for data from the Login Table and EmptyChemicals Table to be deleted //
 function deleteRecords(){
 	$dataBase = connectDB();
 	
@@ -136,8 +138,8 @@ function deleteRecords(){
 	mysqli_close($dataBase);
 }
 
-
-
+// --------------------------------------------------- //
+// Allows for data from the Login Table and EmptyChemicals Table to be updated //
 function updateRecords(){
 	$dataBase = connectDB();
 	
@@ -162,8 +164,8 @@ function updateRecords(){
 }
 
 
-
-
+// --------------------------------------------------- //
+// This shows the delete form on the page //
 echo <<<END
 	<h2>Below you can DELETE records from the tables above</h2>
 	<form action="$_SERVER[PHP_SELF]" method="post">
@@ -173,7 +175,7 @@ echo <<<END
 	</form>
 END;
 
-
+// This shows the update form on the page //
 echo <<<END
 	<h2>Below you can UPDATE records in the tables above</h2>
 	<form action="$_SERVER[PHP_SELF]" method="post">
@@ -186,7 +188,6 @@ END;
 
 
 ?>
-<div id="piechart" style="width: 900px; height: 500px;"></div>
 </div>
 </body>
 
